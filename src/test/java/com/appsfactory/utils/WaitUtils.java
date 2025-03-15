@@ -1,14 +1,14 @@
 package com.appsfactory.utils;
 
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Supplier;
 
 import static org.awaitility.Awaitility.await;
 
@@ -72,4 +72,3 @@ public class WaitUtils {
         }
     }
 }
-
