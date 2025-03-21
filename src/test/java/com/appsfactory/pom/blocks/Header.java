@@ -47,7 +47,7 @@ public class Header {
     @FindBy(linkText = "Start here.")
     private WebElement startHereLink;
 
-    @FindBy(css = "[id='nav-cart']")
+    @FindBy(xpath = "//div[@id='nav-cart-count-container']")
     private WebElement navigationCart;
 
     public Header(WebDriver driver) {
@@ -64,12 +64,10 @@ public class Header {
     }
 
     public void openLocationPopup() {
-        awaitForElements(locationContainer);
         locationContainer.click();
     }
     public void goToShoppingCart() {
         webDriverWaiter.getWait(10).until(ExpectedConditions.elementToBeClickable(navigationCart));
-        waitFor(2);
         navigationCart.click();
     }
 
